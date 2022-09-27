@@ -87,9 +87,9 @@ Estudie detenidamente los primeros pasos de [este tutorial](https://blog.desdeli
 aprenda lo básico sobre cómo editar y modificar un fichero usando vi.
 Con el estudio de este otro [tutorial interactivo on-line](https://www.openvim.com/) debe aprender lo mínimo que necesita
 para comenzar a utilizar vi.
-vim es un editor muy potente pero al principio puede resultar difícil iniciarse en su uso. 
-Para que estudie y practique ese editor dispone de muchos tutoriales en la web. 
-[Este tutorial](https://github.com/Izaird/Vim-primeros-pasos) explica lo básico de vim a través de ejemplos concretos con ficheros de texto.
+Se trata de un editor muy potente pero al principio puede resultar difícil iniciarse en su uso. 
+Para que estudie y practique vim dispone de muchos tutoriales en la web. 
+[Este tutorial](https://github.com/Izaird/Vim-primeros-pasos) explica lo básico del editor a través de ejemplos concretos con ficheros de texto.
 
 Para editar algunas líneas concretas de un fichero de texto usando vi siga estas indicaciones:
 * Use las teclas con flechas arriba/abajo para mover el cursor a la línea que desee editar.

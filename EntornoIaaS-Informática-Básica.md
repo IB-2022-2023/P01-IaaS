@@ -9,7 +9,6 @@ Los objetivos de esta práctica son:
 * Realizar algunas tareas administrativas previas para facilitar el trabajo en la asignatura 
 * Conocer y configurar el entorno de trabajo de la asignatura en el sistema Linux del IaaS 
 * Ser capaz de usar comandos de la shell de GNU/Linux para trabajar en la Máquina Virtual (VM) de la asignatura
-* Configurar y practicar el uso del Visual Studio Code para editar ficheros en su VM
 * Editar, compilar y ejecutar `hello_world.cc` 
 
 ### Rúbrica de evaluacion del ejercicio
@@ -83,13 +82,13 @@ Para la configuración de esa cuenta se le recomienda usar su nombre real, puest
 pasarán a formar parte de su curriculum profesional.
 
 #### El editor Vim
-4. Para editar algunos ficheros en esta sesión se usará el editor [vim](https://www.vim.org/).
-Estudie los primeros pasos de [este tutorial](https://blog.desdelinux.net/usando-vim-tutorial-basico/) para que
-aprenda lo básico sobre cómo modificar un fichero usando vi.
+4. Para editar ficheros en las prácticas de la asignatura se utilizará el editor [vim](https://www.vim.org/) (*vim* es *vi - iMproved*) .
+Estudie detenidamente los primeros pasos de [este tutorial](https://blog.desdelinux.net/usando-vim-tutorial-basico/) para que
+aprenda lo básico sobre cómo editar y modificar un fichero usando vi.
 Con el estudio de este otro [tutorial interactivo on-line](https://www.openvim.com/) debe aprender lo mínimo que necesita
-para usar vi en esta sesión.
-Si está Ud. interesada/o en aprender vim (es un editor muy potente pero los comienzos son difíciles) dispone
-de muchos tutoriales en la web. 
+para comenzar a utilizar vi.
+vim es un editor muy potente pero al principio puede resultar difícil iniciarse en su uso. 
+Para que estudie y practique ese editor dispone de muchos tutoriales en la web. 
 [Este tutorial](https://github.com/Izaird/Vim-primeros-pasos) explica lo básico de vim a través de ejemplos concretos con ficheros de texto.
 
 Para editar algunas líneas concretas de un fichero de texto usando vi siga estas indicaciones:
@@ -235,49 +234,31 @@ cd practicas
 git clone git@github.com:fsande/IB-P01-EntornoIaaS.git 2019-2020-IB-P01-EntornoIaaS
 ```
 
-#### Visual Studio Code
-15. En la máquina local ejecute el Microsoft Visual Studio Code (VSC) y siga 
-[estas instrucciones](https://code.visualstudio.com/docs/remote/ssh)
-para configurar la edición remota de ficheros alojados en su máquina virtual.  
-Para instalar VSC en la instalación Linux de su casa siga
-[estas instrucciones](https://code.visualstudio.com/docs/setup/linux)
-descargando el paquete `.deb`. 
-Resulta útil realizar el paso 3 (opcional) del apartadto "SSH host setup#" que se muestra
-[en esta página](https://code.visualstudio.com/docs/remote/troubleshooting#_configuring-key-based-authentication)
-Ejecute para ello (sustituyendo la dirección IP por la de su VM):
-```
-$ ssh-keygen -t rsa -b 4096
-$ export USER_AT_HOST=usuario@10.6.131.106
-$ export PUBKEYPATH="$HOME/.ssh/id_rsa.pub"
-$ ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
-```
-[Esta imagen](https://raw.githubusercontent.com/fsande/IB-P01-EntornoIaaS/master/img/VSC-connect-to-host.png)
-muestra el paso 2 del apartado "Connect to a remote host" de esas instrucciones mientras que
-[esta otra](https://raw.githubusercontent.com/fsande/IB-P01-EntornoIaaS/master/img/VSC-password.png)
-muestra la ventana de autentificación de VSC para darle acceso a la máquina virtual.  
-[Este vídeo](https://youtu.be/pAUfwae-eWg) ilustra cómo configurar la edición remota de ficheros alojados en máquinas IaaS-ULL usando VSC.
-
-16. Utilice el VSC para escribir el código fuente del programa 
+#### Edición y compilación
+15. Acceda a la máquina virtual usando ssh y cree un directorio `~/practicas`.
+Colóquese en ese directorio y utilice el editor ``vi`` para escribir el código fuente del programa 
 [hello_world.cc](https://github.com/fsande/IB-class-code-examples/blob/master/IntroductionToC%2B%2B/hello_world.cc).
-Grabe ese fichero en un directorio ~/practicas/ que cree en su máquina virtual.
-Acceda a la máquina virtual usando ssh, compile y ejecute ese programa.
+A continuación, compile y ejecute ese programa.
 Para compilar el programa escriba el siguiente comando 
 
 `$ g++ -std=c++14 -g -Wall -o hello_world hello_world.cc`
 
-Y para ejecutarlo escriba:
+Utilice los comandos linux que conozca para ver los ficheros del directorio `~/practicas` en el que está
+trabajando.
+
+Para ejecutarlo el programa escriba:
 
 `$ ./hello_world`
 
 #### Simplificar la conexión a la VM
-17. Siga [estas instrucciones](http://www.linuxproblem.org/art_9.html) 
+16. Siga [estas instrucciones](http://www.linuxproblem.org/art_9.html) 
 para establecer la configuración de la máquina de modo que se pueda conectar a ella sin necesidad de escribir el password en cada conexión. 
 Para poder conectarse por ssh con las máquinas virtuales de IaaS ull ha de autentificarse en la página [acceso.ull.es](acceso.ull.es).  
 Recuerde que en caso de acceder desde fuera de del campus ULL ha de hacerlo mediante una conexión VPN. 
 Consulte [esta referencia](https://www.ull.es/servicios/stic/2016/05/10/servicio-de-vpn-de-la-ull/) 
 (en el Centro de Cálculo, por ahora no lo necesita) para conectarse a través de vpn.
 
-18. También resulta conveniente utilizar alguno de los métodos (ssh config o alias) que se presentan en 
+17. También resulta conveniente utilizar alguno de los métodos (ssh config o alias) que se presentan en 
 [estas instrucciones](https://scotch.io/tutorials/how-to-create-an-ssh-shortcut) 
 de modo que se simplifique la conexión con la máquina remota pudiendo escribir algo como:
 ```

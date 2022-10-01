@@ -231,7 +231,7 @@ Consulte para ello las instrucciones
 cd
 mkdir practicas
 cd practicas
-git clone git@github.com:fsande/IB-P01-EntornoIaaS.git 2019-2020-IB-P01-EntornoIaaS
+git clone git@github.com:IB-2022-2023/P01-IaaS.git 2022-2023-IB-P01-EntornoIaaS
 ```
 
 #### Edición y compilación

@@ -259,7 +259,7 @@ Consulte [esta referencia](https://www.ull.es/servicios/stic/2016/05/10/servicio
 (en el Centro de Cálculo, por ahora no lo necesita) para conectarse a través de vpn.
 
 17. También resulta conveniente utilizar alguno de los métodos (ssh config o alias) que se presentan en 
-[estas instrucciones](https://scotch.io/tutorials/how-to-create-an-ssh-shortcut) 
+[estas instrucciones](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssh-shortcut)
 de modo que se simplifique la conexión con la máquina remota pudiendo escribir algo como:
 ```
 $ ssh vm_asignatura

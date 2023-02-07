@@ -145,7 +145,7 @@ Anote esa dirección IP puesto que la máquina conserva esa dirección IP de for
 Si en algún momento **experimenta dificultades de conexión**, conecte a través de la interfaz web y compruebe que
 la dirección de la máquina no ha cambiado.
 
-9. Abra una conexión ssh con su máquina usando la dirección IP de la misma que ha obtenido en el paso anterior.
+9. Abra una conexión ssh con su máquina usando la dirección IP que ha obtenido en el paso anterior.
 Si esa conexión la realiza desde Linux el comando que ha de usar para establecerla es
 ```
 $ ssh usuario@10.6.131.106
@@ -168,6 +168,8 @@ Para consultar la IP de una máquina en un terminal Linux utilice el comando:
 ```
 $ ifconfig -a
 ```
+Pruebe ese comando, aunque en este punto no es necesario puesto que la dirección IP ya la ha obtenido Ud. en
+la interfaz web del IaaS.
 
 10. Actualice el software (paquetes) de la máquina siguiendo las indicaciones de [esta página](https://linuxconfig.org/how-to-update-ubuntu-packages-on-18-04-bionic-beaver-linux) (por ejemplo).
 Los comandos que tendrá que utilizar son:

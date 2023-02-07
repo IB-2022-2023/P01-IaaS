@@ -127,6 +127,10 @@ y máquina local al PC en el que está Ud. trabajando.
 de la plataforma IaaS-ULL (recuerde tener iniciada una conexión VPN si trabaja desde fuera del campus universitario) y autentifíquese en esa interfaz con sus credenciales (username + password) de la cuenta institucional. 
 [Esta imagen](https://raw.githubusercontent.com/fsande/IB-P01-EntornoIaaS/3b0223eef4fff02835108ac59ea8d2f2f26c43cc/img/1-Ovirt-login.png)
 muestra la pantalla de acceso a la interfaz.  
+Tenga en cuenta que la 
+[interfaz web de las máquinas IaaS](https://iaas.ull.es)
+no soporta muchas conexiones concurrentes de modo que es conveniente que se conecte Ud. cuanto antes para no
+coincidir con otros estudiantes en esa conexión.
 Vea el estado de la máquina y arránquela para comenzar a trabajar con ella.
 [Esta imagen](https://raw.githubusercontent.com/fsande/IB-P01-EntornoIaaS/3b0223eef4fff02835108ac59ea8d2f2f26c43cc/img/2-OvirtVMs.png)
 muestra las máquinas virtuales disponibles. 
@@ -140,10 +144,7 @@ Esta dirección será necesaria para establecer conexiones directas a la máquin
 Anote esa dirección IP puesto que la máquina conserva esa dirección IP de forma estable. 
 Si en algún momento **experimenta dificultades de conexión**, conecte a través de la interfaz web y compruebe que
 la dirección de la máquina no ha cambiado.
-Para consultar la IP de una máquina en un terminal Linux utilice el comando:
-```
-$ ifconfig -a
-```
+
 9. Abra una conexión ssh con su máquina usando la dirección IP de la misma que ha obtenido en el paso anterior.
 Si esa conexión la realiza desde Linux el comando que ha de usar para establecerla es
 ```
@@ -151,17 +152,21 @@ $ ssh usuario@10.6.131.106
 ```
 Cambiando en el comando anterior, la dirección IP por la de su máquina.
 En cuanto se conecte a la máquina remota, el sistema le pedirá sus credenciales.
-Recuerde que inicialmente esas credenciales de acceso son: Username - `usuario` y password - `usuario`.
+Recuerde que inicialmente esas credenciales de acceso son: Username: `usuario` y password: `usuario`.
 
 **Preste mucha atención a este paso** porque si comete un error, puede ser irreparable y su máquina resultará inaccesible.
 En este primer acceso el sistema le solicitará que introduzca la contraseña actual y que escriba dos veces la nueva contraseña elegida.
 No se preocupe por ahora por la contraseña que elija puesto que siempre la puede cambiar en el futuro 
 pero **anote** el password que elija para no perderlo u olvidarlo.
-La recomendación es que elija ahora un password simple (algo como `informatica` o similar).
+La recomendación es que elija ahora un password simple (algo como `minombresintildes` o similar).
 Ya en el futuro podrá cambiarlo por otro más robusto.
 Compruebe a continuación el sistema operativo y versión del mismo:
 ```
 $ lsb_release -a
+```
+Para consultar la IP de una máquina en un terminal Linux utilice el comando:
+```
+$ ifconfig -a
 ```
 
 10. Actualice el software (paquetes) de la máquina siguiendo las indicaciones de [esta página](https://linuxconfig.org/how-to-update-ubuntu-packages-on-18-04-bionic-beaver-linux) (por ejemplo).
